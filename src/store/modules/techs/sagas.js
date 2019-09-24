@@ -6,7 +6,7 @@ import * as Actions from "./actions";
 export function* getTechs() {
   try {
     const response = yield call(api.get, "techs");
-    yield put(Actions.getTechSuccess(response.data));
+    yield put(Actions.getTechsSuccess(response.data));
   } catch (err) {
     yield put(Actions.getTechsFailure());
   }
